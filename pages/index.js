@@ -1,38 +1,37 @@
 import {useState} from 'react';
  
-function Home() {
-    return <DayPercentage />
-}
-
 
 function DayPercentage(props){
     
-    
-
-    const in1 = props.in1;
-    const in2 = props.in2;
-    var resultado = props.resultado;
+    const [resultado,setResultado] = useState("");
+  // let resultado  = "";
+    let in1 = 10;
+    let in2 = 1;
 
     function Calcular(){
-          console.log(this);
-          var a = 10;
-          var b = 1;
-          resultado = sub3(a,b) + "d"+sub4(a,b) + "h"+sub5(a,b) + "m";
-          console.log(resultado);
-        }
+       var a = document.getElementById('input1').value;
+       var b = document.getElementById('input2').value;
+         
+          setResultado( sub3(a,b) + "d"+sub4(a,b) + "h"+sub5(a,b) + "m");  
+         console.log(resultado);
+       }
 
     return (
         <div>
              <div>
-                <input type="text" value={in1} /> % of <input type="text" value={in2}/> day(s) is : {resultado}
+                <input type="text" defaultValue={in1} id="input1" /> % of <input type="text" defaultValue={in2} id="input2"/> day(s) is : <h3>{resultado} </h3> .
             </div> 
             <div>
-                <input type="button" value="Calculate" onClick={Calcular()}  />  
+                <input type="button" value="Calculate" onClick={Calcular}  />  
             </div> 
         </div>
     )
 }
- 
+
+function Home() {
+    return <DayPercentage/>
+}
+  
 function sub1(a,b){ 
     return b*24*(a/100) ;
 }
@@ -53,8 +52,6 @@ function sub5(a,b){
     return Math.trunc((sub2(a,b)%1440)%60);
     }
 
-
- 
 export default Home
 
 
