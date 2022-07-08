@@ -11,64 +11,94 @@ import ReactDOM from 'react-dom';
 // see https://www.freecodecamp.org/news/pass-data-between-components-in-react/
 // to learn how to send data between components
 
-function Home() {
-    const [data, setData] = useState('');
+// var Parcial = 'He may make some time conversions! It is our chance ';
+// var Sub = 'Everyone! NOW! on your posts';
+// var Res = 'Look!! we have visitor';
+// var lastClickType = '';
+// var lastClickValue = '';
 
-    const parentToChild = () => {
-        setData("this goes to child.");
+function IncrementList(temp){
+  if(lstCom.length > 0 && temp.ButtonType == 'numero' && lstCom[lstCom.length - 1].ButtonType === 'numero'){
+  lstCom[lstCom.length - 1].ButtonValue = lstCom[lstCom.length - 1].ButtonValue + temp.ButtonValue;
+  }else{
+    lstCom.push(temp);
+  }
+}
+
+var lstCom = []; 
+function Home() {
+  let [Parcial, setParcial] = useState(''); 
+  let [Sub, setSub] = useState(''); 
+  let [Res, setRes] = useState(''); 
+
+    const GetButtonValue = (ButtonValue,ButtonType) => {
+      let temp = {ButtonValue : ButtonValue , ButtonType:ButtonType}
+      IncrementList(temp);
+      console.log(lstCom,temp);
+      
+      var finalSub = '';
+      lstCom.forEach(k => {finalSub = finalSub + k.ButtonValue + ' '});
+      
+      setSub(  finalSub );
+      setRes(lstCom[lstCom.length - 1].ButtonValue);
+    }
+
+     
+
+    const Result = (a) => {
+        setData(a);
       }
 
 
     return  ( 
 <div className="container">
     <div className="row">
-    <Painel Result="Resultado" Parcial="Parcial" Sub="Mensagem linha inferiorr" parentToChild={data}/>
+    <Painel Result={Res} Parcial={Parcial} Sub={Sub} />
     </div>
     <div className="row"> 
-    <Botao valor="7" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="8" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="9" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="Decimal" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base"/>
-    <Botao valor="= " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"/>
+    <Botao valor="7" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="8" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="9" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="Decimal" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+    <Botao valor="= " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text" tipo="igual" GetButtonValue={GetButtonValue}/>
     </div>
     <div className="row">
-    <Botao valor="4" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="5" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="6" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="Days" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base"/>
-    <Botao valor="% " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"/>
+    <Botao valor="4" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="5" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="6" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="Days" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+    <Botao valor="% " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text" tipo="porcentagem" GetButtonValue={GetButtonValue}/>
     </div>
     <div className="row">
-    <Botao valor="1" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="2" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="3" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="Minutes" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base"/>
-    <Botao valor="In" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"/>
+    <Botao valor="1" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="2" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="3" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="Minutes" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+    <Botao valor="In" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"  tipo="em" GetButtonValue={GetButtonValue}/>
     </div>
     <div className="row">
-    <Botao valor="C" cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="Clear"/>
-    <Botao valor="0" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor=". " cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="numero"/>
-    <Botao valor="Seconds" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base"/>
-    <Botao valor="Of" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"/>
+    <Botao valor="C" cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="Clear" GetButtonValue={GetButtonValue}/>
+    <Botao valor="0" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor=". " cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+    <Botao valor="Seconds" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+    <Botao valor="Of" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"  tipo="de" GetButtonValue={GetButtonValue}/>
     </div> 
     <DayPercentage display="showD" /> 
     <Estilo/> 
 
     <div>
-       <input type="button" onClick={() => parentToChild()} value="teste parent to child" />
+       <input type="button" className='hideD' onClick={() => Result('teste')} value="teste parent to child" />
       </div>
 
 </div>
        
   )
 }
-
- 
+  
 function teste2(){
 var dt = new Date();
 var result = dt.setDate(dt.getDate() + parseFloat(10.5));
-console.log(result);
+console.log(result,dt.getDate());
 }
 
 //npm run dev to start
