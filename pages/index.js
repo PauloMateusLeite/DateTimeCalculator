@@ -110,8 +110,8 @@ function Home() {
     <Botao valor="Seconds" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
     <Botao valor="Of" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"  tipo="de" GetButtonValue={GetButtonValue}/>
     </div> 
-    <DayPercentage display="showD" /> 
-    <Estilo/> 
+     <DayPercentage display="showD" /> 
+   <Estilo/> 
 
     <div>
        <input type="button" className='hideD' onClick={() => Result('teste')} value="teste parent to child" />
@@ -129,6 +129,8 @@ console.log(result,dt.getDate());
 }
 
 //npm run dev to start
+
+ 
 
 export default Home
 
