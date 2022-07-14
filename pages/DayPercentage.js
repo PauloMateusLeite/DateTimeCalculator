@@ -12,7 +12,6 @@ export default function DayPercentage(props){
        var b = document.getElementById('input2').value;
          
           setResultado( sub3(a,b) + "d"+sub4(a,b) + "h"+sub5(a,b) + "m");  
-         console.log(resultadoDP);
        }
 
     return (

@@ -23,7 +23,6 @@ function JoinTypes(){
 function Calcular(){
  if (JoinTypes() == "numeroporcentagemdenumerobase")
  {
-   
   return CalcularPorcentagem(lstCom);
  }
 }
@@ -38,6 +37,7 @@ function IncrementList(temp){
   }
 }
 
+ 
 var lstCom = []; 
 function Home() {
   let [Parcial, setParcial] = useState(''); 
@@ -49,11 +49,9 @@ function Home() {
       {
         lstCom = [];
         setRes('');
-
       }else if(ButtonType == 'igual')
       {
         var teste = Calcular();
-       // console.log(lstCom[0],lstCom[3]);
         setRes(teste); 
       }
       else{

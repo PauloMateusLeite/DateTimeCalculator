@@ -2,44 +2,68 @@
 // import DivididoPorCem from './Auxiliar.js';
 // import DiasEmHoras from './Auxiliar.js';
 
+import { Form } from "react-bootstrap";
+
 export default function CalcularPorcentagem(lstCom){
-    console.log('Calc. Porc.',lstCom);
 
-    // if(lstCom[4].ButtonValue == 'Days')
-    // {
-    //   return  PorcentagemDeDias(lstCom); 
-    // }else 
-    // {
-    //   return  "Erro ao realizar operação de porcentagem.";
-    // }
-    console.log('chegou aqui');
-    return  sub3(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "d"+sub4(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "h"+sub5(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "m" ;
+    if(lstCom[4].ButtonValue == 'Days')
+    {
+      return  PorcentagemDeDias(lstCom); 
+    }else if(lstCom[4].ButtonValue == 'Hours')
+    {
+      return  PorcentagemDeHoras(lstCom); 
+    }else if(lstCom[4].ButtonValue == 'Minutes')
+    {
+      return  PorcentagemDeMinutos(lstCom); 
+    }else 
+    {
+      return  "Erro ao realizar operação de porcentagem.";
+    }
+ 
+  }
 
-    return  PorcentagemDeDias(lstCom);
+  function PorcentagemDeMinutos(lstCom){
+    let min = PorcentagemDeUmNumero(lstCom[3].ButtonValue,lstCom[0].ButtonValue);
+    return  FormatarEmTempo(min);
+   }
 
-
+  function PorcentagemDeHoras(lstCom){
+   let min = PorcentagemDeUmNumero(HorasEmMinutos(lstCom[3].ButtonValue),lstCom[0].ButtonValue);
+   return  FormatarEmTempo(min);
   }
 
   function PorcentagemDeDias(lstCom){
-    return  sub3(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "d"+sub4(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "h"+sub5(lstCom[0].ButtonValue,lstCom[3].ButtonValue) + "m" ;
+    let min = PorcentagemDeUmNumero(DiasEmMinutos(lstCom[3].ButtonValue),lstCom[0].ButtonValue);
+    return  FormatarEmTempo(min);
   }
 
-  function sub1(a,b){ 
-    return b*24*(a/100) ;
-}
+  function FormatarEmTempo(min){
+    return  MinutosParaBaseDias(min)+ "d" + MinutosParaBaseHoras(min)+"h"+MinutosParaBaseMinutos(min)+ "m" + MinutosParaBaseSegundos(min) + 's';
+  }
 
-function sub2(a,b){
-    return sub1(a,b)*60
-    }
+  function HorasEmMinutos(a){
+    return a * 60;
+  }
 
-function sub3(a,b){
-    return Math.trunc( sub2(a,b) / 1440);
-    }
+  function DiasEmMinutos(a){
+    return a * 1440; // a * 60 * 24
+  }
 
-function sub4(a,b){
-    return Math.trunc( (sub2(a,b)%1440)/(60))
-    }
+  function PorcentagemDeUmNumero(numero,porcentagem){
+      return numero * (porcentagem/100);
+  }
 
-function sub5(a,b){
-    return Math.trunc((sub2(a,b)%1440)%60);
-    }
+  function MinutosParaBaseDias(Minutos){
+    return Math.trunc( Minutos / 1440);
+  }
+
+  function MinutosParaBaseHoras(Minutos){
+    return Math.trunc( (Minutos%1440)/(60))
+  }
+  function MinutosParaBaseMinutos(Minutos){
+    return Math.trunc((Minutos%1440)%60);
+  }
+
+  function MinutosParaBaseSegundos(Minutos){
+    return Math.trunc((((Minutos%1440)%60)*60)%60);
+  }
