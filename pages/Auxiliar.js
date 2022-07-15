@@ -1,6 +1,6 @@
 
 
-export function DivididoPorCem(a){
+export default function DivididoPorCem(a){
     return a/100;
 }
 
