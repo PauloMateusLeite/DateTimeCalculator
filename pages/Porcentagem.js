@@ -3,7 +3,7 @@
 // import DiasEmHoras from './Auxiliar.js';
 
 import { Form } from "react-bootstrap";
-
+let ButtonValue = '';
 export default function CalcularPorcentagem(lstCom){
 
     if(!lstCom){
