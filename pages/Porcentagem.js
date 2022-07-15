@@ -6,6 +6,10 @@ import { Form } from "react-bootstrap";
 
 export default function CalcularPorcentagem(lstCom){
 
+    if(!lstCom){
+      return '';
+    }
+
     if(lstCom[4].ButtonValue == 'Days')
     {
       return  PorcentagemDeDias(lstCom); 
