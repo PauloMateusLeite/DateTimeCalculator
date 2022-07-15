@@ -27,16 +27,25 @@ export default function CalcularPorcentagem(lstCom){
   }
 
   function PorcentagemDeMinutos(lstCom){
+    if(!lstCom){
+      return '';
+    }
     let min = PorcentagemDeUmNumero(lstCom[3].ButtonValue,lstCom[0].ButtonValue);
     return  FormatarEmTempo(min);
    }
 
   function PorcentagemDeHoras(lstCom){
+    if(!lstCom){
+      return '';
+    }
    let min = PorcentagemDeUmNumero(HorasEmMinutos(lstCom[3].ButtonValue),lstCom[0].ButtonValue);
    return  FormatarEmTempo(min);
   }
 
   function PorcentagemDeDias(lstCom){
+    if(!lstCom){
+      return '';
+    }
     let min = PorcentagemDeUmNumero(DiasEmMinutos(lstCom[3].ButtonValue),lstCom[0].ButtonValue);
     return  FormatarEmTempo(min);
   }
