@@ -2,6 +2,10 @@ import {useState} from 'react';
 
 export default function DayPercentage(props){
     
+
+    //this code is only for test react contexts
+
+
     const [resultadoDP,setResultado] = useState();
   // let resultado  = "";
     let in1 = 10;
@@ -15,7 +19,7 @@ export default function DayPercentage(props){
        }
 
     return (
-        <div >
+        <div className={props.display} >
              <div>
                 <input type="text" defaultValue={in1} id="input1" /> % of <input type="text" defaultValue={in2} id="input2"/> day(s) is : <h3>{resultadoDP} </h3> .
             </div> 

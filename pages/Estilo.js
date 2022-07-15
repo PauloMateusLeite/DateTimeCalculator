@@ -12,7 +12,8 @@ const uniqueVar = ` .vermelho {color:red;}
                     .showD {display: block;}                  
                     .hideD {display: none;}                    
                     .botao:active {background-color: #F0F0F0;} 
-                    .botao:hover {background-color: #F6F6F6;} `;
+                    .botao:hover {background-color: #F6F6F6;}
+                    .red: {border:1px solid #FF0000;background-color: #FaFaFa;} `;
 
 export default function Estilo(){
     return(
