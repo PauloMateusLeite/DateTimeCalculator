@@ -10,13 +10,13 @@ export default function CalcularPorcentagem(lstCom){
       return '';
     }
 
-    if(lstCom[4].ButtonValue == 'Days')
+    if(lstCom[4].ButtonValue != null && lstCom[4].ButtonValue == 'Days')
     {
       return  PorcentagemDeDias(lstCom); 
-    }else if(lstCom[4].ButtonValue == 'Hours')
+    }else if(lstCom[4].ButtonValue != null && lstCom[4].ButtonValue == 'Hours')
     {
       return  PorcentagemDeHoras(lstCom); 
-    }else if(lstCom[4].ButtonValue == 'Minutes')
+    }else if(lstCom[4].ButtonValue != null && lstCom[4].ButtonValue == 'Minutes')
     {
       return  PorcentagemDeMinutos(lstCom); 
     }else 
