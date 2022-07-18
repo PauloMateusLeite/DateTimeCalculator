@@ -3,22 +3,23 @@
 // import DiasEmHoras from './Auxiliar.js';
 
 import { Form } from "react-bootstrap";
-
+var ButtonValue = '';
 export default function CalcularPorcentagem(lstCom){
 
-    if(lstCom[4].ButtonValue == 'Days')
-    {
-      return  PorcentagemDeDias(lstCom); 
-    }else if(lstCom[4].ButtonValue == 'Hours')
-    {
-      return  PorcentagemDeHoras(lstCom); 
-    }else if(lstCom[4].ButtonValue == 'Minutes')
-    {
-      return  PorcentagemDeMinutos(lstCom); 
-    }else 
-    {
-      return  "Erro ao realizar operação de porcentagem.";
-    }
+
+    // if(lstCom[4].ButtonValue == 'Days')
+    // {
+    //   return  PorcentagemDeDias(lstCom); 
+    // }else if(lstCom[4].ButtonValue == 'Hours')
+    // {
+    //   return  PorcentagemDeHoras(lstCom); 
+    // }else if(lstCom[4].ButtonValue == 'Minutes')
+    // {
+    //   return  PorcentagemDeMinutos(lstCom); 
+    // }else 
+    // {
+    //   return  "Erro ao realizar operação de porcentagem.";
+    // }
  
   }
 
