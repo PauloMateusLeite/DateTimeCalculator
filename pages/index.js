@@ -6,6 +6,7 @@ import Botao from './Botao';
 import React from 'react';
 import CalcularPorcentagem from './Porcentagem.js';
 import NumeroBase from './NumeroBase.js';
+import MudaBase from './MudaBase';
 import ReactDOM from 'react-dom';
 
 // see https://www.freecodecamp.org/news/pass-data-between-components-in-react/
@@ -25,6 +26,9 @@ function Calcular(){
   if (JoinTypes() == "numerobase")
   {
     return NumeroBase(lstCom[0].ButtonValue,lstCom[1].ButtonValue);
+  } if (JoinTypes() == "numerobaseembase")
+  {
+    return MudaBase(lstCom[0].ButtonValue,lstCom[1].ButtonValue,lstCom[3].ButtonValue);
   }
 }
 
@@ -83,7 +87,6 @@ function Home() {
       }
 
     function CommandMakesSense(valor,tipo){
-      console.log(lstCom,LastType());
       if(tipo == 'clear'){
         return true;
       }else{

@@ -18,7 +18,7 @@ export default function NumeroBase(NumeroInserido,BaseFinal){
         min = NumeroInserido / 60;
     }else 
     {
-      return  "Error during percentage operation.";
+      return  "Error during conversion.";
     }
  
 
