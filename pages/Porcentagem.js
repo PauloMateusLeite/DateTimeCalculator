@@ -3,11 +3,8 @@
 // import DiasEmHoras from './Auxiliar.js';
 
 import { Form } from "react-bootstrap";
-export default function CalcularPorcentagem(lstCom){
-  
-  var BaseFinal = lstCom[4].ButtonValue;
-
-
+export default function CalcularPorcentagem(lstCom,BaseFinal){
+   
     // if(lstCom[4].ButtonValue == 'Days')
     // {
     //   return  PorcentagemDeDias(lstCom); 
