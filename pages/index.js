@@ -124,35 +124,35 @@ function Home() {
     <div className="container " >
       <div className="row ">
         <div col="col2 s12 m12" className="row ">
-          <div className="row">
+          <div className="row ">
           <Painel Result={Res} Parcial={Parcial} Sub={Sub} />
           </div>
-          <div className="row"> 
-          <Botao valor="7" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="8" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="9" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="Days" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+          <div className="row " > 
+          <Botao valor="7" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="8" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="9" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="Days" cor="card-panel darken-1" col="col s3 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
           <Botao valor="= " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text" tipo="igual" GetButtonValue={GetButtonValue}/>
           </div>
           <div className="row">
-          <Botao valor="4" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="5" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="6" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="Hours" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+          <Botao valor="4" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="5" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="6" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="Hours" cor="card-panel darken-1" col="col s3 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
           <Botao valor="% " cor="card-panel darken-1" col="col s1 m1" textColor="dark-text" tipo="porcentagem" GetButtonValue={GetButtonValue}/>
           </div>
           <div className="row">
-          <Botao valor="1" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="2" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="3" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="Minutes" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+          <Botao valor="1" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="2" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="3" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="Minutes" cor="card-panel darken-1" col="col s3 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
           <Botao valor="In" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"  tipo="em" GetButtonValue={GetButtonValue}/>
           </div>
           <div className="row">
-          <Botao valor="C" cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue}/>
-          <Botao valor="0" cor="card-panel teal" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="." cor="card-panel blue-grey" col="col s1 m1" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
-          <Botao valor="Seconds" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
+          <Botao valor="C" cor="card-panel blue-grey" col="col s2 m2" textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue}/>
+          <Botao valor="0" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="." cor="card-panel blue-grey" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue}/>
+          <Botao valor="Seconds" cor="card-panel darken-1" col="col s3 m2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue}/>
           <Botao valor="Of" cor="card-panel darken-1" col="col s1 m1" textColor="dark-text"  tipo="de" GetButtonValue={GetButtonValue}/>
           </div> 
           <DayPercentage display="hideD"  /> 
