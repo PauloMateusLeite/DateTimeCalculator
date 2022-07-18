@@ -5,19 +5,19 @@
 import { Form } from "react-bootstrap";
 export default function CalcularPorcentagem(lstCom,BaseFinal){
    
-    // if(lstCom[4].ButtonValue == 'Days')
-    // {
-    //   return  PorcentagemDeDias(lstCom); 
-    // }else if(lstCom[4].ButtonValue == 'Hours')
-    // {
-    //   return  PorcentagemDeHoras(lstCom); 
-    // }else if(lstCom[4].ButtonValue == 'Minutes')
-    // {
-    //   return  PorcentagemDeMinutos(lstCom); 
-    // }else 
-    // {
-    //   return  "Erro ao realizar operação de porcentagem.";
-    // }
+    if(BaseFinal == 'Days')
+    {
+      return  PorcentagemDeDias(lstCom); 
+    }else if(BaseFinal == 'Hours')
+    {
+      return  PorcentagemDeHoras(lstCom); 
+    }else if(BaseFinal == 'Minutes')
+    {
+      return  PorcentagemDeMinutos(lstCom); 
+    }else 
+    {
+      return  "Erro ao realizar operação de porcentagem.";
+    }
  
   }
 
