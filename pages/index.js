@@ -19,7 +19,7 @@ function JoinTypes(){
 function Calcular(){
  if (JoinTypes() == "numeroporcentagemdenumerobase")
   {
-    return CalcularPorcentagem(lstCom);
+   // return CalcularPorcentagem(lstCom);
   }
 }
 
