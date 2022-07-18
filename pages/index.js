@@ -5,6 +5,7 @@ import Estilo from './Estilo';
 import Botao from './Botao'; 
 import React from 'react';
 import CalcularPorcentagem from './Porcentagem.js';
+import NumeroBase from './NumeroBase.js';
 import ReactDOM from 'react-dom';
 
 // see https://www.freecodecamp.org/news/pass-data-between-components-in-react/
@@ -20,6 +21,10 @@ function Calcular(){
  if (JoinTypes() == "numeroporcentagemdenumerobase")
   {
     return CalcularPorcentagem(lstCom,lstCom[4].ButtonValue);
+  }
+  if (JoinTypes() == "numerobase")
+  {
+    return NumeroBase(lstCom[0].ButtonValue,lstCom[1].ButtonValue);
   }
 }
 

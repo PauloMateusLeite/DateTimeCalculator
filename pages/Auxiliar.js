@@ -4,6 +4,7 @@ export default function DivididoPorCem(a){
     return a/100;
 }
 
-export function DiasEmHoras(a){
+export const DiasEmHoras = (a) =>{
     return a*24;
-}
+};
+ 
