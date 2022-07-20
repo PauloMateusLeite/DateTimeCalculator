@@ -122,7 +122,7 @@ function Home() {
 
         <div className="container" >
             <div className="row ">
-                <div className="col s7 m7 ">
+                <div className="col s12 m7 ">
                     <div className="row ">
                         <div className="col s12 m12 ">
                             <Painel Result={Res} Parcial={Parcial} Sub={Sub} />
@@ -162,20 +162,14 @@ function Home() {
                         <input type="button" className='hideD' onClick={() => Result('teste')} value="teste parent to child" />
                     </div>
                 </div>
-                <div className="col offset-s1 offset-m1 s4 m4  ">
+                <div className="col offset-s1 offset-m1 s12 m4  ">
 
 
                     <div className="card">
                         <div className="card-content">
                             <p>Hi, you can use the calculator with 3 different ways: (You always need to click = when finish)</p>
                         </div>
-                        {/*<div className="card-tabs">*/}
-                        {/*    */}{/*<ul className="tabs tabs-fixed-width">*/}
-                        {/*    */}{/*    <li className="tab"><a href="#test4">test 1</a></li>*/}
-                        {/*    */}{/*    <li className="tab"><a className="active" href="#test5">test 2</a></li>*/}
-                        {/*    */}{/*    <li className="tab"><a href="#test6">test 3</a></li>*/}
-                        {/*    */}{/*</ul>*/}
-                        {/*</div>*/}
+                     
                         <div className="card-content grey lighten-4">
                             <div id="test4">
                                 <p>Calculating the porcentage of a period:</p>
