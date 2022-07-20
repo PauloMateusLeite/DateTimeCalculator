@@ -46,7 +46,7 @@ function IncrementList(temp) {
 
 var lstCom = [];
 function Home() {
-  
+
 
     let [Parcial, setParcial] = useState('');
     let [Sub, setSub] = useState('');
@@ -167,19 +167,47 @@ function Home() {
 
                     <div className="card">
                         <div className="card-content">
-                            <p>i am a very simple card. i am good at containing small bits of information. i am convenient because i require little markup to use effectively.</p>
+                            <p>Hi, you can use the calculator with 3 different ways: (You always need to click = when finish)</p>
                         </div>
-                        <div className="card-tabs">
-                            <ul className="tabs tabs-fixed-width">
-                                <li className="tab"><a href="#test4">test 1</a></li>
-                                <li className="tab"><a className="active" href="#test5">test 2</a></li>
-                                <li className="tab"><a href="#test6">test 3</a></li>
-                            </ul>
-                        </div>
+                        {/*<div className="card-tabs">*/}
+                        {/*    */}{/*<ul className="tabs tabs-fixed-width">*/}
+                        {/*    */}{/*    <li className="tab"><a href="#test4">test 1</a></li>*/}
+                        {/*    */}{/*    <li className="tab"><a className="active" href="#test5">test 2</a></li>*/}
+                        {/*    */}{/*    <li className="tab"><a href="#test6">test 3</a></li>*/}
+                        {/*    */}{/*</ul>*/}
+                        {/*</div>*/}
                         <div className="card-content grey lighten-4">
-                            <div id="test4">test 1</div>
-                            <div id="test5">test 2</div>
-                            <div id="test6">test 3</div>
+                            <div id="test4">
+                                <p>Calculating the porcentage of a period:</p>
+                                <div className="row">
+                                    <Botao valor="5" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="% " cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="porcentagem" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Of" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="de" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="1" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Days" cor="card-panel darken-1" col="col s3 m4" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                </div>
+                                
+
+                            </div>
+                            <div id="test5">
+                                <p>Converting period bases:</p>
+                                <div className="row">
+                                    <Botao valor="8" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Days" cor="card-panel darken-1" col="col s3 m4" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="In" cor="card-panel darken-1" col="col s2 m2" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Hours" cor="card-panel darken-1" col="col s3 m4" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                </div>
+                                
+                            </div>
+                            <div id="test6">
+                                <p>Or</p>
+                                <div className="row">
+                                    <Botao valor="3" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="0" cor="card-panel teal" col="col s2 m2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Hours" cor="card-panel darken-1" col="col s3 m4" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                    
+                                </div> 
+                            </div>
                         </div>
                     </div>
 
