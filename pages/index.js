@@ -47,8 +47,8 @@ function IncrementList(temp) {
 var lstCom = [];
 function Home() {
      
-    //document.head.innerHTML = document.head.innerHTML + '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051" crossOrigin = "anonymous" ></script > '
     useScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051');
+    useScript('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
 
     let [Parcial, setParcial] = useState('');
     let [Sub, setSub] = useState('');
