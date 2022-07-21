@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
 
-const useScript = url => {
+const useScript = (url) => {
     useEffect(() => {
         const script = document.createElement('script');
-
+ 
         script.src = url;
         script.async = true;
         script.crossOrigin = 'anonymous';
 
-        document.body.appendChild(script);
+        document.head.appendChild(script);
+ 
 
         return () => {
-            document.body.removeChild(script);
+            document.head.removeChild(script);
         }
     }, [url]);
 };

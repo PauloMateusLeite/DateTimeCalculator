@@ -1,5 +1,4 @@
-import Materialize from './Materialize';
-
+ 
 
 const uniqueVar = ` .vermelho {color:red;}                     
                     .fonte8 {font-size: 8px;}                  
@@ -21,8 +20,6 @@ export default function Estilo(){
             <style>
                 {uniqueVar}
             </style>  
-            <Materialize />
-
         </div>
     );
 
