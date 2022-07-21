@@ -1,13 +1,11 @@
 import { useState } from 'react';
+import React from 'react';
 import Painel from './Painel';
 import Estilo from './Estilo';
 import Botao from './Botao';
-import React from 'react';
 import CalcularPorcentagem from './Porcentagem.js';
 import NumeroBase from './NumeroBase.js';
-import MudaBase from './MudaBase';
-import ReactDOM from 'react-dom';
-import useScript from './useScript';
+import MudaBase from './MudaBase'; 
 
 
 // see https://www.freecodecamp.org/news/pass-data-between-components-in-react/
@@ -46,9 +44,6 @@ function IncrementList(temp) {
 
 var lstCom = [];
 function DateTimeCalc() {
-
-    useScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051');
-    useScript('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js');
 
     let [Parcial, setParcial] = useState('');
     let [Sub, setSub] = useState('');
@@ -128,7 +123,7 @@ function DateTimeCalc() {
 
     return (
 
-        <div className="container" >
+        <div className='row ' >
 
             <div className="row hideD">
                 <div className="col hide-on-med-and-down red">
@@ -143,12 +138,11 @@ function DateTimeCalc() {
             </div>
             <Estilo />
             <div className="row ">
-                <div className="col s12 offset-m2 m8 l7  ">
+                <div className="col s12 offset-m2 m8 l7   ">
                     <div className="row ">
-                        {/*<div className="col s12 m7 bred">*/}
                         <Painel Result={Res} Parcial={Parcial} Sub={Sub} />
-                        {/* </div>*/}
                     </div>
+                      
                     <div className="row " >
                         <Botao valor="7" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="8" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
