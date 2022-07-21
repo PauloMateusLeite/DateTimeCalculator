@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Painel from './Painel';
-import DayPercentage from './DayPercentage';
 import Estilo from './Estilo';
 import Botao from './Botao';
 import React from 'react';
@@ -119,26 +118,37 @@ function Home() {
 
     const BotaoNumero = 'waves-effect waves-light btn';
     const BotaoNumeroRed = 'waves-effect waves-light btn red';
-    const ColNumero = 'col s1 m1';
-    const ColBases = 'col s3 m2';
-
+    const ColNumero = 'col s2 m2 l2 center-align';
+    const ColBases = 'col s4 m4 l4 center-align';
 
     return (
 
         <div className="container" >
             <div className="row ">
-                <div className="col s12 m7 ">
+                <div className="col hide-on-med-and-down red">
+                    large
+                </div>
+                <div className="col hide-on-large-only hide-on-small-only show-on-medium  red ">
+                    medium
+                </div>
+                <div className="col hide-on-med-and-up  red ">
+                    small
+                </div>
+            </div>
+            <Estilo />
+            <div className="row ">
+                <div className="col s12 offset-m2 m8 l7  ">
                     <div className="row ">
-                        <div className="col s12 m7">
-                            <Painel Result={Res} Parcial={Parcial} Sub={Sub} />
-                        </div>
+                        {/*<div className="col s12 m7 bred">*/}
+                        <Painel Result={Res} Parcial={Parcial} Sub={Sub}  />
+                       {/* </div>*/}
                     </div>
                     <div className="row " >
                         <Botao valor="7" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="8" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="9" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="Days" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
-                        <Botao valor="= " cor={BotaoNumeroRed} col="col s1 m1" textColor="dark-text" tipo="igual" GetButtonValue={GetButtonValue} />
+                        <Botao valor="= " cor="btn-floating btn-large waves-effect waves-light red" col="col s1 m1" textColor="dark-text" tipo="igual" GetButtonValue={GetButtonValue} />
                     </div>
                     <div className="row">
                         <Botao valor="4" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
@@ -155,63 +165,53 @@ function Home() {
                         <Botao valor="In" cor={BotaoNumero} col="col s1 m1" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
                     </div>
                     <div className="row">
-                        <Botao valor="C" cor={BotaoNumeroRed} col={ColNumero} textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue} />
+                        <Botao valor="C" cor="btn-floating btn-large waves-effect waves-light green" col={ColNumero} textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue} />
                         <Botao valor="0" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="." cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="Seconds" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
                         <Botao valor="Of" cor={BotaoNumero} col="col s1 m1" textColor="dark-text" tipo="de" GetButtonValue={GetButtonValue} />
                     </div>
-                    <DayPercentage display="hideD" />
-                    <Estilo />
-                    <div>
-                        <input type="button" className='hideD' onClick={() => Result('teste')} value="teste parent to child" />
-                    </div>
                 </div>
-                <div className="col offset-s1 offset-m1 s12 m4  ">
-
-
+                <div className="col s12 offset-m2 m8 l5  ">
                     <div className="card">
                         <div className="card-content">
                             <p>Hi, you can use the calculator with 3 different ways: (You always need to click = when finish)</p>
                         </div>
-                     
+
                         <div className="card-content grey lighten-4">
                             <div id="test4">
                                 <p>Calculating the porcentage of a period:</p>
                                 <div className="row">
-                                    <Botao valor="5" cor={BotaoNumero} col={ColBases} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="% " cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="porcentagem" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="Of" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="de" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="1" cor={BotaoNumero} col={ColBases} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="Days" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="5" cor={BotaoNumero} col="col s2 m2 l2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="% " cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="porcentagem" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Of" cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="de" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="1" cor={BotaoNumero} col="col s2 m2 l2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Days" cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
                                 </div>
-                                
+
 
                             </div>
                             <div id="test5">
                                 <p>Converting period bases:</p>
                                 <div className="row">
-                                    <Botao valor="8" cor={BotaoNumero} col={ColBases} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="Days" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="In" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="Hours" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="8" cor={BotaoNumero} col="col s2 m2 l2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Days" cor={BotaoNumero} col="col s3 m3 l3" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="In" cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Hours" cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
                                 </div>
-                                
+
                             </div>
                             <div id="test6">
                                 <p>Or</p>
                                 <div className="row">
-                                    <Botao valor="3" cor={BotaoNumero} col={ColBases} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="0" cor={BotaoNumero} col={ColBases} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
-                                    <Botao valor="Hours" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
-                                    
-                                </div> 
+                                    <Botao valor="3" cor={BotaoNumero} col="col s2 m2 l2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="0" cor={BotaoNumero} col="col s2 m2 l2" textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
+                                    <Botao valor="Hours" cor={BotaoNumero} col="col s2 m2 l2" textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
+
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
