@@ -12,8 +12,8 @@ function Home() {
     return (
         <div className="container">
           <nav>
-            <div className="nav-wrapper  grey darken-3">
-            <a href="#" className="brand-logo"> &nbsp; <i class="large material-icons">date_range</i> Boas contas ...</a>
+            <div className="nav-wrapper grey lighten-2">
+            <a href="#" className="brand-logo"> &nbsp; <i class="large material-icons">date_range</i> Calc Today</a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><a href="#">&nbsp;</a></li>
                 <li><a href="#">&nbsp;</a></li>
@@ -21,9 +21,9 @@ function Home() {
             </ul>
             </div>
          </nav>
-         <div class="progress">
+         {/* <div class="progress">
       <div class="indeterminate"></div>
-  </div>
+  </div> */}
             <DateTimeCalc />
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </div>
