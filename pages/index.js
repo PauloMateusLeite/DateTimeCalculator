@@ -127,7 +127,7 @@ function Home() {
 
         <div className="container" >
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051"
-                crossorigin="anonymous"></script>
+                crossOrigin="anonymous"></script>
             <div className="row hideD">
                 <div className="col hide-on-med-and-down red">
                     large
