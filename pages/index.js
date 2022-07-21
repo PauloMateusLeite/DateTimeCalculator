@@ -7,6 +7,7 @@ import CalcularPorcentagem from './Porcentagem.js';
 import NumeroBase from './NumeroBase.js';
 import MudaBase from './MudaBase';
 import ReactDOM from 'react-dom';
+import useScript from './useScript';
 
 
 // see https://www.freecodecamp.org/news/pass-data-between-components-in-react/
@@ -45,7 +46,9 @@ function IncrementList(temp) {
 
 var lstCom = [];
 function Home() {
-
+     
+    //document.head.innerHTML = document.head.innerHTML + '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051" crossOrigin = "anonymous" ></script > '
+    useScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051');
 
     let [Parcial, setParcial] = useState('');
     let [Sub, setSub] = useState('');
@@ -126,8 +129,7 @@ function Home() {
     return (
 
         <div className="container" >
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051"
-                crossOrigin="anonymous"></script>
+           
             <div className="row hideD">
                 <div className="col hide-on-med-and-down red">
                     large
