@@ -63,6 +63,8 @@ function Home() {
                 if (CalcRes == "0d0h0m0s") {
                     setSub('Numbers smaller than one second will not be displayed');
                 }
+                lstCom = [];
+                setParcial('');
             }
             else {
                 let temp = { ButtonValue: ButtonValue, ButtonType: ButtonType }
@@ -118,13 +120,15 @@ function Home() {
 
     const BotaoNumero = 'waves-effect waves-light btn';
     const BotaoNumeroRed = 'waves-effect waves-light btn red';
-    const ColNumero = 'col s2 m2 l2 center-align';
+    const ColNumero = 'col s2 m2 l2 center-align ';
     const ColBases = 'col s4 m4 l4 center-align';
 
     return (
 
         <div className="container" >
-            <div className="row ">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8866834607753051"
+                crossorigin="anonymous"></script>
+            <div className="row hideD">
                 <div className="col hide-on-med-and-down red">
                     large
                 </div>
@@ -165,7 +169,7 @@ function Home() {
                         <Botao valor="In" cor={BotaoNumero} col="col s1 m1" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
                     </div>
                     <div className="row">
-                        <Botao valor="C" cor="btn-floating btn-large waves-effect waves-light green" col={ColNumero} textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue} />
+                        <Botao valor="C" cor={BotaoNumeroRed} col={ColNumero} textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue} />
                         <Botao valor="0" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="." cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="Seconds" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
