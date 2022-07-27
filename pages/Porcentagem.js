@@ -1,8 +1,7 @@
  
 // import DivididoPorCem from './Auxiliar.js';
 // import DiasEmHoras from './Auxiliar.js';
-
-import { Form } from "react-bootstrap";
+ 
 export default function CalcularPorcentagem(lstCom,BaseFinal){
    
     if(BaseFinal == 'Days')
