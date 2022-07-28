@@ -1,4 +1,4 @@
- 
+import Materialize from './Materialize'; 
 
 const uniqueVar = ` .vermelho {color:red;}                     
                     .fonte8 {font-size: 8px;}                  
