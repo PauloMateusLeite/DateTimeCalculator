@@ -18,6 +18,7 @@ function JoinTypes() {
 }
 
 function Calcular() {
+    ListToEnglish();
     if (JoinTypes() == "numeroporcentagemdenumerobase") {
         return CalcularPorcentagem(lstCom, lstCom[4].ButtonValue);
     }
@@ -40,6 +41,20 @@ function IncrementList(temp) {
     } else {
         lstCom.push(temp);
     }
+}
+
+function ListToEnglish(){
+    lstCom.forEach(k => { k = VerbToEnglish(k.ButtonType) });
+}
+
+function VerbToEnglish(verb){
+    if( verb.toLowerCase() == "dias"){return "days";}
+    else if( verb.toLowerCase() == "horas"){return "hours";}
+    else if( verb.toLowerCase() == "minutos"){return "minutes";}
+    else if( verb.toLowerCase() == "segundos"){return "seconds";}
+    else if( verb.toLowerCase() == "para"){return "to";}
+    else if( verb.toLowerCase() == "de"){return "of";}
+    else {return verb;}
 }
 
 var lstCom = [];
@@ -162,7 +177,7 @@ function DateTimeCalc() {
                         <Botao valor="2" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="3" cor={BotaoNumero} col={ColNumero} textColor="white-text" tipo="numero" GetButtonValue={GetButtonValue} />
                         <Botao valor="Minutes" cor={BotaoNumero} col={ColBases} textColor="dark-text" tipo="base" GetButtonValue={GetButtonValue} />
-                        <Botao valor="In" cor={BotaoNumero} col="col s1 m1" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
+                        <Botao valor="To" cor={BotaoNumero} col="col s1 m1" textColor="dark-text" tipo="em" GetButtonValue={GetButtonValue} />
                     </div>
                     <div className="row">
                         <Botao valor="C" cor={BotaoNumeroRed} col={ColNumero} textColor="white-text" tipo="clear" GetButtonValue={GetButtonValue} />
